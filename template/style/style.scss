@@ -1,0 +1,265 @@
+html { 
+ position:relative; 
+ min-height:100%;
+}
+
+body {
+	background-image: url(/template/img/bg2.jpg);
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	.articles-list {
+		padding-bottom: 100px;/*Примерно 2 размера footer, чтобы он не наезжал на контент при узком окне браузера*/
+	}
+}
+/**прибирає стрілки з числового інпута*/
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+
+
+h1 {
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #3869ec;
+	text-align: center;
+	margin: 30px auto;
+	font-family: 'Bad Script', cursive;
+	text-shadow: 2px 2px 2px #6897bb, 0 0 0.2em #f5f5dc;
+	
+}
+
+h2 {
+	font-size: 2em;
+	font-style: italic;
+	
+}
+
+h3 {
+	font-size: 1.5em;
+	font-style: italic;
+	text-align: center;
+}
+
+.readonly-form {
+	display: none;
+}
+
+table {
+	color: #0a450b;
+	table-layout: fixed;
+	width: 100%;
+	td, th {
+		width: 2%;
+		padding: 1px;
+		input[type=text] {
+			width: 100%;			
+		}
+		
+	}
+}
+
+
+
+
+
+.container {
+	margin: 40px auto;
+	text-align: center;
+}
+
+.container2 {
+	text-align: left;
+	form{
+		input{
+			margin-bottom: 20px;
+			width: 50%;
+		}
+
+		textarea {
+			margin-bottom: 20px;
+			min-width: 50%;
+			width: 50%;
+			min-height: 100px;
+
+		}
+
+		.full-desc {
+			margin-bottom: 20px;
+			min-width: 50%;
+			width: 50%;
+			min-height: 280px;
+			
+		}
+
+		input[type=submit] {
+			width: 25%;
+			
+		}
+	}
+}
+
+.header {
+	ul{
+		display: block;
+		margin-top: 10px;
+		text-align: center;
+		li {
+			display: inline;
+			margin-right: 30px;
+			a {
+				font-size: 1.5em;
+				
+			}
+		}
+	}
+}
+
+
+
+.small-menu {
+	vertical-align: middle;
+
+	width: 95%;
+	margin: auto;
+	
+	height: 40px;             /*щоб текст був посередині блока по висоті*/
+	line-height: 40px;		  /*  */
+
+	.form-inline{
+		.form-group {	
+			color: #1e5e1b;
+			font-weight: bold;
+			font-style: italic;
+			font-family: 'Roboto', sans-serif;
+			display: block;
+			float: left;
+
+			select{
+				width: 60px;
+			}
+		}
+	}
+
+	p {
+		color: #1d351c;
+		text-shadow: 2px 1px 1px #6897bb, 0 0 0.5em #f5f5dc;	
+		font-family: 'Bad Script', cursive, 'Roboto', sans-serif;
+		margin-left: 10px;
+		display: block;
+		float: left;
+	}
+}
+.small-menu::after {     /*clear-fix при використанні float всередині блока*/
+	content: '.';
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+
+
+.article-item {
+	padding: 10px;
+	border-radius: 3px;
+	background-color: rgba(245,245,220, .4); 
+	width: 95%;
+	margin: auto;
+	margin-top: 30px;
+	padding-top: 20px;
+	word-wrap: break-word;
+
+	.info {
+		margin-top: 10px;
+		.timestamp{
+			text-align: right;
+		}
+		.links{
+			a{
+				margin-right: 15px;
+			}
+		}
+	}
+	.info-wrapp{
+		margin-bottom: 10px;
+		*{
+			margin-right: 10px;
+		}
+	}
+}
+
+.article-delete {
+	color: #818581;
+}
+
+.delete-button {
+
+	margin: 100px auto;
+	text-align: center;
+
+	h2 {
+		font-weight: bold;
+		text-decoration: underline;
+		color: #603453;
+
+	}
+
+	form {
+		input {
+			margin: 20px;
+		}
+	}
+}
+
+.pager {
+
+	/*  http://webgyry.info/footer-to-bottom-page-css*/ 
+	margin-top: 50px;
+	border-top: 3px solid white;
+	padding-top: 20px;
+	margin-bottom: 10px;
+	position: absolute;
+ 	bottom: 0;
+	table {
+		width: 80%;
+		margin: auto;
+		border-collapse: separate;
+		border-spacing: 70px 0;
+		
+		tr {
+			
+
+			td{
+				
+
+				
+
+				a {
+					display: block;
+					height: 48px;
+					line-height: 48px; 
+
+					background: #0e2f44;
+					border: solid 1px #003366;
+					border-radius: 8px;
+					
+					text-align: center;
+					text-decoration: none;
+					font-style: italic;
+					color: #f0f8ff;
+					font-family: 'Roboto', sans-serif;
+					font-size: 1.5em;
+
+					/*щоб не можна було виділити мишкою елемент*/
+					-moz-user-select: none;
+					-khtml-user-select: none;
+					-webkit-user-select: none; 
+				}
+
+				a:hover {
+					background: #31698a;
+				}
+			}
+		}
+	}
+}
