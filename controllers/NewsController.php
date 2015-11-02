@@ -58,6 +58,7 @@ class NewsController
 			//перевірка чи id новини в запиті має відповідну новину в таблиці бази даних
 			//і якщо немає, то перенаправлення на сторінку помилки
 			if ($id == $newsItem['id']) { require_once (ROOT . '/views/news/newsItem.php'); }
+			else Request_errorController::actionWrong_request();
 			
 		}
 	}
@@ -82,6 +83,7 @@ class NewsController
 			//перевірка чи id новини в запиті має відповідну новину в таблиці бази даних
 			//і якщо немає, то перенаправлення на сторінку помилки
 			if ($id == $newsItem['id']) { require_once (ROOT . '/views/news/edit.php'); }
+			else Request_errorController::actionWrong_request();
 			
 		}
 	}
@@ -94,7 +96,8 @@ class NewsController
 
 			//перевірка чи id новини в запиті має відповідну новину в таблиці бази даних
 			//і якщо немає, то перенаправлення на сторінку помилки
-			if ($id == $newsItem['id']) { require_once (ROOT . '/views/news/delete.php'); }
+			if ($id == $newsItem['id']) require_once (ROOT . '/views/news/delete.php');
+			else Request_errorController::actionWrong_request();
 			
 		}
 	}

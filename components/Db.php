@@ -10,9 +10,13 @@ class Db
 		$paramsPath = ROOT . '/config/db_params.php';
 		$params = include($paramsPath);
 
-		
-		$db = new PDO("mysql:host={$params['host']}; dbname={$params['dbname']}", $params['user'], $params['password']);
-		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		try {
+			$db = new PDO("mysql:host={$params['host']}; dbname={$params['dbname']}", $params['user'], $params['password']);
+			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		}catch(PDOException $e) {
+			print ('<u><b>ERROR:</b></u> ' . $e->getMessage());
+		}
+
 
 		//створення необхідної таблиці в базі даних
 		$query = $db->prepare ("CREATE TABLE IF NOT EXISTS `publication` (

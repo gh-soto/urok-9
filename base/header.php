@@ -11,7 +11,7 @@ $editor = Authorization::logIn()['check_login'];
 
 // Якщо раніше заголовок сторінки не був заданий, тоді ми його задаємо.
 if (!isset($page_title)) {
-	$page_title = 'Blog site';
+	$page_title = 'ns-oxit-study';
 }
 
 ?>
@@ -27,12 +27,15 @@ if (!isset($page_title)) {
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 
+	<link rel="shortcut icon" href="template/img/favicon-16x16.png" type="image/png">
+
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Bad+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 	<meta charset="UTF-8">
 </head>
 <body>
+
 <!-- Будуємо меню сайту. -->
 <div class="header navbar navbar-default">
 	<ul class="main-menu">
@@ -46,3 +49,4 @@ if (!isset($page_title)) {
 		<?php endif; ?>
 	</ul>
 </div>
+

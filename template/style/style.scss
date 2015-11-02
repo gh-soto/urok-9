@@ -10,6 +10,9 @@ body {
 	.articles-list {
 		padding-bottom: 100px;/*Примерно 2 размера footer, чтобы он не наезжал на контент при узком окне браузера*/
 	}
+	#welcome {
+		font-size: 2em;
+	}
 }
 /**прибирає стрілки з числового інпута*/
 input[type=number] {
@@ -100,14 +103,19 @@ table {
 }
 
 .header {
+	background: #666666;
+	border: none;
+	
 	ul{
 		display: block;
+
 		margin-top: 10px;
 		text-align: center;
 		li {
 			display: inline;
 			margin-right: 30px;
 			a {
+				color: #cbbeb5;
 				font-size: 1.5em;
 				
 			}
