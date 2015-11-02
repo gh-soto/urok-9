@@ -31,10 +31,13 @@ if (!isset($page_title)) {
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Bad+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
 
 	<meta charset="UTF-8">
 </head>
 <body>
+
+<?php include(ROOT . '/views/authorization/login_popup.php'); ?>
 
 <!-- Будуємо меню сайту. -->
 <div class="header navbar navbar-default">
@@ -45,7 +48,7 @@ if (!isset($page_title)) {
 			<li><a href="/logout">Вихід</a></li>
 		<?php endif; ?>
 		<?php if (!$editor): ?>
-			<li><a href="/login">Вхід</a></li>
+			<li><a href="#" onclick="showPopUp()">Вхід</a></li>
 		<?php endif; ?>
 	</ul>
 </div>

@@ -48,8 +48,7 @@ class Authorization
 
 			if (isset($_SESSION['login'])) { 
 				$admin_power = $_SESSION['login'];
-
-			}
+			} 
 			else { $admin_power = 0; }
 		}
 
