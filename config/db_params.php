@@ -1,7 +1,7 @@
 <?php
  return array (
  	'host' => 'localhost',
- 	'dbname' => '111',
+ 	'dbname' => 'nsOxitStudy',
  	'user' => 'root',
  	'password' => '',
 

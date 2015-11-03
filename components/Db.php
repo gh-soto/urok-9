@@ -11,8 +11,12 @@ class Db
 		$params = include($paramsPath);
 
 		try {
-			$db = new PDO("mysql:host={$params['host']}; dbname={$params['dbname']}", $params['user'], $params['password']);
+			$db = new PDO("mysql:host={$params['host']}", $params['user'], $params['password']);
 			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+			$db->query("CREATE DATABASE IF NOT EXISTS {$params['dbname']}");
+			$db->query("use {$params['dbname']}");
+
 		}catch(PDOException $e) {
 			print ('<u><b>ERROR:</b></u> ' . $e->getMessage());
 		}
