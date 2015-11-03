@@ -13,6 +13,7 @@ require_once (ROOT . '/base/header.php');
 <?php if(!$editor): 
 
   print '<h3>' . Authorization::logIn()['error_login'] . '</h3>';
+ 
 ?>
 
   <div class="container">

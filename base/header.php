@@ -21,11 +21,12 @@ if (!isset($page_title)) {
 <head>
 	<title><?php print $page_title; ?></title>
 	
-	<link rel="stylesheet" type="text/css" href="/template/style/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href='/template/style/bootstrap.css'>
 	<link rel="stylesheet" type="text/css" href="/template/style/style.css">
 
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="/template/js/jquery-1.11.3.min.js"></script>
+	<script src="/template/js/bootstrap.min.js"></script>
+	<script src="/template/js/login-popup.js"></script>
 
 	<link rel="shortcut icon" href="template/img/favicon-16x16.png" type="image/png">
 

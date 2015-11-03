@@ -1,65 +1,7 @@
-<div class="body-shadow-out" id="body-shadow-out-x" onclick="closePopUp()">
+<div class="body-shadow-out" id="body-shadow-out-x" <?php if ($auth_error !== 42) print ' style="display:block" ';?> onclick="closePopUp()">
 </div>	
 
-
-
-<div class="body-shadow-in" id="body-shadow-in-x">
-
-	<script>
-		function closePopUp() 
-		{
-			var x = document.getElementById("body-shadow-out-x"),
-				y = document.getElementById("body-shadow-in-x"),
-				a = document.getElementById("dash1"),
-				b = document.getElementById("dash2"),
-				c = document.getElementById("dash3");
-			x.style.display = "none";
-			y.style.display = "none";
-			a.style.display = "none";
-			b.style.display = "none";
-			c.style.display = "none";
-		}
-
-		function showPopUp() 
-		{
-			var x = document.getElementById("body-shadow-out-x"),
-				y = document.getElementById("body-shadow-in-x"),
-				a = document.getElementById("dash1");
-			x.style.display = "block";
-			y.style.display = "block";
-			a.style.display = "block";
-		}
-
-		function showLoginWindow() 
-		{
-			var a = document.getElementById("dash1"),
-				b = document.getElementById("dash2");
-			a.style.display = "none";
-			b.style.display = "block";
-
-		}
-
-		function backToFirstPopUp() 
-		{
-			var a = document.getElementById("dash1"),
-				b = document.getElementById("dash2"),
-				c = document.getElementById("dash3");
-			a.style.display = "block";
-			b.style.display = "none";
-			c.style.display = "none";
-
-		}
-
-		function showSignUpWindow() 
-		{
-			var a = document.getElementById("dash1"),
-				c = document.getElementById("dash3");
-			a.style.display = "none";
-			c.style.display = "block";
-
-		}
-
-	</script>
+<div class="body-shadow-in" id="body-shadow-in-x" <?php if ($auth_error !== 42) print ' style="display:block" ';?>>
 
 
 	<div id="dash1">
@@ -74,9 +16,6 @@
 		<a href="#"><div class="use" id="use-login" onclick="showLoginWindow()">Login</div></a>
 		<a href="#"><div class="use" id="use-register" onclick="showSignUpWindow()">Sing up</div></a>
 	</div>
-
-
-
 
 
 	<div id="dash2">
@@ -104,13 +43,8 @@
 				</div>		
 			</form>
 		</div>
-
-		<a class="login-footer" href="#" onclick="backToFirstPopUp()"><p><< Back</p></a>
-
+		<a class="login-footer" href="#" onclick="backToFirstPopUp()"><p>Back</p></a>
 	</div>
-
-
-
 
 
 	<div id="dash3">
@@ -143,10 +77,23 @@
 				</div>		
 			</form>
 		</div>
-
-		<a class="login-footer" href="#"  onclick="backToFirstPopUp()"><p><< Back</p></a>
-
+		<a class="login-footer" href="#"  onclick="backToFirstPopUp()"><p>Back</p></a>
 	</div>
+
+
+	<div id="dash4" <?php if ($auth_error !== 42) print ' style="display:block" ';?>>
+		<div class="login-header">
+				<p>LOGIN</p>
+				<div class="close-form" onclick="closePopUp()">
+					<img class="close-grey" src="/template/img/login pop-up/close-icon.svg" alt="exit">
+					<img class="close-red" src="/template/img/login pop-up/close-icon-red.svg" alt="exit">
+				</div>
+			</div>		
+		<p class="choose-login-or-register"><?php print $auth_error; ?></p>
+		<a class="login-footer" href="#" onclick="backToFirstPopUp()"><p>Back</p></a>
+	</div>
+
+
 </div>
 
 

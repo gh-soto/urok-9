@@ -26,7 +26,7 @@ input[type=number] {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(70, 132, 153, 0.8); }
+  background: rgba(0, 0, 0, 0.9); }
 
 .body-shadow-in {
   display: none;
@@ -36,6 +36,56 @@ input[type=number] {
   position: fixed;
   z-index: 11;
   border: 1px silid red; }
+  .body-shadow-in .login-header {
+    height: 55px;
+    background: #F4F4F2;
+    line-height: 55px;
+    margin-bottom: 10px; }
+    .body-shadow-in .login-header p {
+      display: block;
+      float: left;
+      font-size: 1.5em;
+      font-weight: bolder;
+      font-family: 'Source Sans Pro', sans-serif;
+      margin-left: 10%; }
+    .body-shadow-in .login-header .close-form {
+      height: 54px;
+      text-align: center;
+      float: right;
+      width: 54px;
+      position: relative; }
+      .body-shadow-in .login-header .close-form img {
+        position: absolute;
+        left: 13px;
+        bottom: 13px;
+        height: 26px; }
+      .body-shadow-in .login-header .close-form .close-grey {
+        z-index: 3;
+        height: 28px;
+        left: 12px;
+        bottom: 12px; }
+      .body-shadow-in .login-header .close-form .close-red {
+        z-index: 2; }
+    .body-shadow-in .login-header .close-form:hover .close-grey {
+      display: none; }
+  .body-shadow-in .login-footer {
+    text-decoration: none;
+    color: #838383;
+    display: block;
+    position: absolute;
+    height: 35px;
+    line-height: 35px;
+    bottom: 0;
+    width: 100%;
+    background: #F4F4F2; }
+    .body-shadow-in .login-footer p {
+      margin: 0;
+      font-size: 1em;
+      font-weight: bolder;
+      font-family: 'Source Sans Pro', sans-serif;
+      text-align: center; }
+  .body-shadow-in .login-footer:hover {
+    background-color: #E4E4E2; }
   .body-shadow-in #dash1 {
     display: none;
     z-index: 11;
@@ -44,38 +94,6 @@ input[type=number] {
     margin: auto;
     position: relative;
     background: white; }
-    .body-shadow-in #dash1 .login-header {
-      height: 55px;
-      background: #F4F4F2;
-      line-height: 55px;
-      margin-bottom: 10px; }
-      .body-shadow-in #dash1 .login-header p {
-        display: block;
-        float: left;
-        font-size: 1.5em;
-        font-weight: bolder;
-        font-family: 'Source Sans Pro', sans-serif;
-        margin-left: 10%; }
-      .body-shadow-in #dash1 .login-header .close-form {
-        height: 54px;
-        text-align: center;
-        float: right;
-        width: 54px;
-        position: relative; }
-        .body-shadow-in #dash1 .login-header .close-form img {
-          position: absolute;
-          left: 13px;
-          bottom: 13px;
-          height: 26px; }
-        .body-shadow-in #dash1 .login-header .close-form .close-grey {
-          z-index: 3;
-          height: 28px;
-          left: 12px;
-          bottom: 12px; }
-        .body-shadow-in #dash1 .login-header .close-form .close-red {
-          z-index: 2; }
-      .body-shadow-in #dash1 .login-header .close-form:hover .close-grey {
-        display: none; }
     .body-shadow-in #dash1 .choose-login-or-register {
       text-align: center;
       font-size: 1em;
@@ -119,38 +137,6 @@ input[type=number] {
     margin: auto;
     position: relative;
     background: white; }
-    .body-shadow-in #dash2 .login-header {
-      height: 55px;
-      background: #F4F4F2;
-      line-height: 55px;
-      margin-bottom: 10px; }
-      .body-shadow-in #dash2 .login-header p {
-        display: block;
-        float: left;
-        font-size: 1.5em;
-        font-weight: bolder;
-        font-family: 'Source Sans Pro', sans-serif;
-        margin-left: 10%; }
-      .body-shadow-in #dash2 .login-header .close-form {
-        height: 54px;
-        text-align: center;
-        float: right;
-        width: 54px;
-        position: relative; }
-        .body-shadow-in #dash2 .login-header .close-form img {
-          position: absolute;
-          left: 13px;
-          bottom: 13px;
-          height: 26px; }
-        .body-shadow-in #dash2 .login-header .close-form .close-grey {
-          z-index: 3;
-          height: 28px;
-          left: 12px;
-          bottom: 12px; }
-        .body-shadow-in #dash2 .login-header .close-form .close-red {
-          z-index: 2; }
-      .body-shadow-in #dash2 .login-header .close-form:hover .close-grey {
-        display: none; }
     .body-shadow-in #dash2 .login-form {
       font-family: 'Source Sans Pro', sans-serif;
       width: 250px;
@@ -162,24 +148,6 @@ input[type=number] {
         background-color: #ED6347; }
       .body-shadow-in #dash2 .login-form input[type=submit]:hover {
         background-color: #C12B05; }
-    .body-shadow-in #dash2 .login-footer {
-      text-decoration: none;
-      color: #838383;
-      display: block;
-      position: absolute;
-      height: 35px;
-      line-height: 35px;
-      bottom: 0;
-      width: 100%;
-      background: #F4F4F2; }
-      .body-shadow-in #dash2 .login-footer p {
-        margin: 0;
-        font-size: 1em;
-        font-weight: bolder;
-        font-family: 'Source Sans Pro', sans-serif;
-        text-align: center; }
-    .body-shadow-in #dash2 .login-footer:hover {
-      background-color: #E4E4E2; }
   .body-shadow-in #dash3 {
     display: none;
     z-index: 11;
@@ -188,38 +156,6 @@ input[type=number] {
     margin: auto;
     position: relative;
     background: white; }
-    .body-shadow-in #dash3 .login-header {
-      height: 55px;
-      background: #F4F4F2;
-      line-height: 55px;
-      margin-bottom: 10px; }
-      .body-shadow-in #dash3 .login-header p {
-        display: block;
-        float: left;
-        font-size: 1.5em;
-        font-weight: bolder;
-        font-family: 'Source Sans Pro', sans-serif;
-        margin-left: 10%; }
-      .body-shadow-in #dash3 .login-header .close-form {
-        height: 54px;
-        text-align: center;
-        float: right;
-        width: 54px;
-        position: relative; }
-        .body-shadow-in #dash3 .login-header .close-form img {
-          position: absolute;
-          left: 13px;
-          bottom: 13px;
-          height: 26px; }
-        .body-shadow-in #dash3 .login-header .close-form .close-grey {
-          z-index: 3;
-          height: 28px;
-          left: 12px;
-          bottom: 12px; }
-        .body-shadow-in #dash3 .login-header .close-form .close-red {
-          z-index: 2; }
-      .body-shadow-in #dash3 .login-header .close-form:hover .close-grey {
-        display: none; }
     .body-shadow-in #dash3 .login-form {
       width: 250px;
       text-align: left;
@@ -231,24 +167,23 @@ input[type=number] {
         background-color: #18AEDA; }
       .body-shadow-in #dash3 .login-form input[type=submit]:hover {
         background-color: #2F96B4; }
-    .body-shadow-in #dash3 .login-footer {
-      text-decoration: none;
-      color: #838383;
-      display: block;
-      position: absolute;
-      height: 35px;
-      line-height: 35px;
-      bottom: 0;
-      width: 100%;
-      background: #F4F4F2; }
-      .body-shadow-in #dash3 .login-footer p {
-        margin: 0;
-        font-size: 1em;
-        font-weight: bolder;
-        font-family: 'Source Sans Pro', sans-serif;
-        text-align: center; }
-    .body-shadow-in #dash3 .login-footer:hover {
-      background-color: #E4E4E2; }
+  .body-shadow-in #dash4 {
+    display: none;
+    z-index: 11;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    background: white; }
+    .body-shadow-in #dash4 .login-header {
+      visibility: hidden; }
+    .body-shadow-in #dash4 .choose-login-or-register {
+      text-align: center;
+      font-size: 1.1em;
+      color: #690505;
+      font-family: 'Source Sans Pro', sans-serif;
+      margin-top: 30px;
+      margin-bottom: 30px; }
 
 h1 {
   font-size: 2.5em;

@@ -26,21 +26,21 @@ require(ROOT . '/base/header.php');
 ?>
 
 <h1 id="welcome"> Welcome to blog site!</h1>
+
 <!-- Виводимо статті у тегах -->
 <div class="articles-list">
-	
-	
+
 	<!-- підключення файлу з слайдером-->
 	<?php include (ROOT . '/views/news/slider.html') ?>
 	<br><h6 style="text-align:center;">(цей слайдер скачав <a href="http://www.menucool.com/javascript-image-slider">звідси</a>)</h6>
 
-
+	
 
 	<div class="small-menu"> 
-		<?php print $news_per_page; ?> <p>статтей на сторінку</p>
+		<?php print $news_per_page; ?> <p>статей на сторінку</p>
 	</div>
 
-
+	
 	<?php if (empty($newsList)): ?>
 		<!-- У випадку, якщо статтей немає - виводимо повідомлення. -->
 		<h2>Статті відсутні.</h2>

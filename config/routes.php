@@ -3,7 +3,8 @@
 //
 return array (
 
-	'login' => 'authorization/log_in',
+	'auth_error' => 'news/auth_error',
+	'login' => 'authorization/log_in_popup',
 	'logout' => 'authorization/log_out',
 
 

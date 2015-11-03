@@ -21,10 +21,6 @@ input[type=number] {
 
 
 
-
-
-
-
 /*pop-up for authorization*/
 .body-shadow-out {
 	display: none;
@@ -34,7 +30,7 @@ input[type=number] {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(70,132,153, .8);
+	background: rgba(0,0,0, .9);
 }
 .body-shadow-in {
 	display: none;
@@ -45,6 +41,77 @@ input[type=number] {
 	z-index: 11;
 	border: 1px silid red;
 
+	.login-header {
+			
+		height: 55px;
+		background: #F4F4F2;
+		
+		line-height: 55px;
+		margin-bottom: 10px;
+		p {
+			display: block;
+			float: left;
+			font-size: 1.5em;
+			font-weight: bolder;
+			font-family: 'Source Sans Pro', sans-serif;
+			margin-left: 10%;
+		}
+
+		.close-form {
+			height: 54px;
+			text-align: center;
+			float: right;
+			width: 54px;
+			
+			position: relative;
+			img {
+				position: absolute;
+				left: 13px;
+				bottom: 13px;
+				height: 26px;
+			}
+			.close-grey {
+				z-index: 3;
+				height: 28px;
+				left: 12px;
+				bottom: 12px;
+
+			}
+
+			.close-red {
+				z-index: 2;
+			}
+		}
+		.close-form:hover {
+			.close-grey {
+				display: none;
+			}				
+		}
+	}
+
+	.login-footer {
+		text-decoration: none;
+		color: #838383;
+		display: block;
+		
+		position: absolute;
+		height: 35px;
+		line-height: 35px;
+		bottom: 0;
+		width: 100%;
+		background: #F4F4F2;
+		p {
+			margin: 0;
+			font-size: 1em;
+			font-weight: bolder;
+			font-family: 'Source Sans Pro', sans-serif;
+			text-align: center;
+		}
+	}
+	.login-footer:hover {
+		background-color: #E4E4E2;
+	}	
+
 	#dash1 {
 		display: none;
 		z-index: 11;
@@ -53,55 +120,6 @@ input[type=number] {
 		margin: auto;
 		position: relative;
 		background: white;
-
-		.login-header {
-			
-			height: 55px;
-			background: #F4F4F2;
-			
-			line-height: 55px;
-			margin-bottom: 10px;
-			p {
-				display: block;
-				float: left;
-				font-size: 1.5em;
-				font-weight: bolder;
-				font-family: 'Source Sans Pro', sans-serif;
-				margin-left: 10%;
-			}
-
-			.close-form {
-				height: 54px;
-				text-align: center;
-				float: right;
-				width: 54px;
-				
-				position: relative;
-				img {
-					position: absolute;
-					left: 13px;
-					bottom: 13px;
-					height: 26px;
-				}
-				.close-grey {
-					z-index: 3;
-					height: 28px;
-					left: 12px;
-					bottom: 12px;
-
-				}
-
-				.close-red {
-					z-index: 2;
-				}
-			}
-			.close-form:hover {
-				.close-grey {
-					display: none;
-				}
-					
-				}
-		}
 
 		.choose-login-or-register {
 			text-align: center;
@@ -161,55 +179,6 @@ input[type=number] {
 		position: relative;
 		background: white;
 
-		.login-header {
-			
-			height: 55px;
-			background: #F4F4F2;
-			
-			line-height: 55px;
-			margin-bottom: 10px;
-			p {
-				display: block;
-				float: left;
-				font-size: 1.5em;
-				font-weight: bolder;
-				font-family: 'Source Sans Pro', sans-serif;
-				margin-left: 10%;
-			}
-
-			.close-form {
-				height: 54px;
-				text-align: center;
-				float: right;
-				width: 54px;
-				
-				position: relative;
-				img {
-					position: absolute;
-					left: 13px;
-					bottom: 13px;
-					height: 26px;
-				}
-				.close-grey {
-					z-index: 3;
-					height: 28px;
-					left: 12px;
-					bottom: 12px;
-
-				}
-
-				.close-red {
-					z-index: 2;
-				}
-			}
-			.close-form:hover {
-				.close-grey {
-					display: none;
-				}
-					
-				}
-		}
-
 		.login-form {
 			
 			font-family: 'Source Sans Pro', sans-serif;
@@ -227,30 +196,6 @@ input[type=number] {
 				background-color: #C12B05;
 			}
 		}
-
-		.login-footer {
-			text-decoration: none;
-			color: #838383;
-			display: block;
-			
-			position: absolute;
-			height: 35px;
-			line-height: 35px;
-			bottom: 0;
-			width: 100%;
-			background: #F4F4F2;
-			p {
-				margin: 0;
-				font-size: 1em;
-				font-weight: bolder;
-				font-family: 'Source Sans Pro', sans-serif;
-				text-align: center;
-			}
-		}
-		.login-footer:hover {
-			background-color: #E4E4E2;
-		}
-
 	}
 
 	#dash3 {
@@ -261,54 +206,6 @@ input[type=number] {
 		margin: auto;
 		position: relative;
 		background: white;
-
-		.login-header {
-			
-			height: 55px;
-			background: #F4F4F2;
-			
-			line-height: 55px;
-			margin-bottom: 10px;
-			p {
-				display: block;
-				float: left;
-				font-size: 1.5em;
-				font-weight: bolder;
-				font-family: 'Source Sans Pro', sans-serif;
-				margin-left: 10%;
-			}
-
-			.close-form {
-				height: 54px;
-				text-align: center;
-				float: right;
-				width: 54px;
-				
-				position: relative;
-				img {
-					position: absolute;
-					left: 13px;
-					bottom: 13px;
-					height: 26px;
-				}
-				.close-grey {
-					z-index: 3;
-					height: 28px;
-					left: 12px;
-					bottom: 12px;
-
-				}
-
-				.close-red {
-					z-index: 2;
-				}
-			}
-			.close-form:hover {
-				.close-grey {
-					display: none;
-				}					
-			}
-		}
 
 		.login-form {	
 			
@@ -326,36 +223,32 @@ input[type=number] {
 	   			background-color: #2F96B4;  
 			}
 		}
+	}
 
-		.login-footer {
-			text-decoration: none;
-			color: #838383;
-			display: block;
-			
-			position: absolute;
-			height: 35px;
-			line-height: 35px;
-			bottom: 0;
-			width: 100%;
-			background: #F4F4F2;
-			p {
-				margin: 0;
-				font-size: 1em;
-				font-weight: bolder;
-				font-family: 'Source Sans Pro', sans-serif;
-				text-align: center;
-			}
-		}
-		.login-footer:hover {
-			background-color: #E4E4E2;
+	#dash4 {
+		display: none;
+		z-index: 11;
+		width: 300px;
+		height: 200px;
+		margin: auto;
+		position: relative;
+		background: white;
+
+		.login-header {
+			visibility: hidden;
 		}
 
+		.choose-login-or-register {
+
+			text-align: center;
+			font-size: 1.1em;	
+			color: #690505;	
+			font-family: 'Source Sans Pro', sans-serif;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
 	}
 }
-
-
-
-
 
 
 
@@ -400,8 +293,6 @@ table {
 		
 	}
 }
-
-
 
 
 
@@ -463,7 +354,6 @@ table {
 }
 
 
-
 .small-menu {
 	vertical-align: middle;
 
@@ -503,7 +393,6 @@ table {
 	clear: both;
 	height: 0;
 }
-
 
 
 .article-item {
@@ -573,14 +462,9 @@ table {
 		border-collapse: separate;
 		border-spacing: 70px 0;
 		
-		tr {
-			
+		tr {		
 
 			td{
-				
-
-				
-
 				a {
 					display: block;
 					height: 48px;

@@ -10,30 +10,41 @@ class AuthorizationController
 {	
 
 
-		//в разі введення неправильного запиту, відповідний йому метод не буде знайдений в контроллері
-	//тому викличеться магічний метод __call, який перенаправить користувача на сторінку з інформацією про помилку
-	public function __call($actionName, $parameters)
-	{
-		Request_errorController::actionWrong_request();
-		
-	}
-
-
+//в разі введення неправильного запиту, відповідний йому метод не буде знайдений в контроллері
+//тому викличеться магічний метод __call, який перенаправить користувача на сторінку з інформацією про помилку
+public function __call($actionName, $parameters)
+{
+	Request_errorController::actionWrong_request();
 	
-	public function actionLog_in()
-	{				 
-		Authorization::logIn();
-		require_once (ROOT . '/views/authorization/login.php');
-		//return $editor;
-		
-	}
+}
+
+
+//авторизація на спеціальний для цього сторінці
+public function actionLog_in()
+{				 
+	Authorization::logIn();
+	require_once (ROOT . '/views/authorization/login.php');
+	//return $editor;
+	
+}
 
 
 
-	public  function actionLog_out()
-	{
-		Authorization::logOut();
-	}
+//для авторизації через pop-up
+public function actionLog_in_PopUp()
+{				 
+	Authorization::logIn_PopUp();
+	require_once (ROOT . '/views/authorization/login.php');
+	//return $editor;
+	
+}
+
+
+
+public  function actionLog_out()
+{
+	Authorization::logOut();
+}
 
 
 
