@@ -273,18 +273,36 @@ public static function getNewsListByPage($page)
 		$page = $page_count;
 	}
 
+	$newsList = array();
 
 	//робить виборку даних з таблиці відповідно до номеру сторінки ($page) в запиті та числа к-сті новин на сторінку
 	if ($page) {
-		
-		$result = $db->query("SELECT id, title, date, short_content 
-							  FROM `publication` 
-							  ORDER BY date DESC 
-							  LIMIT " . (($page_count - $page) * $news_quantity)  . ", " . $news_quantity
-							);
-										//(($page-1) * $news_quantity)  --  для послідовності сторінок: сторінка №1 з новими статтями
-										//(($page_count - $page) * $news_quantity)  -- для послідовності сторінок: сторінка №1 з старими статтями, а остання сторінка з найновішими статтями
 		$i = 0;
+		try {
+			$result = $db->query("SELECT id, title, date, short_content 
+								  FROM `publication` 
+								  ORDER BY date DESC 
+								  LIMIT " . (($page_count - $page) * $news_quantity)  . ", " . $news_quantity
+								);
+											//(($page-1) * $news_quantity)  --  для послідовності сторінок: сторінка №1 з новими статтями
+											//(($page_count - $page) * $news_quantity)  -- для послідовності сторінок: сторінка №1 з старими статтями, а остання сторінка з найновішими статтями
+		}catch(PDOException $e) {
+			if ($page == $page_count) {
+				$newsList[$i]['display_none_back'] = ' style="visibility: hidden;"';
+				$newsList[$i]['display_none_next'] = ' ';
+			}
+			elseif ($page == 1) {
+				$newsList[$i]['display_none_back'] = ' ';
+				$newsList[$i]['display_none_next'] = ' style="visibility: hidden;"';
+			}
+			else {
+				$newsList[$i]['display_none_back'] = ' ';
+				$newsList[$i]['display_none_next'] = ' ';
+			}
+			
+		}
+
+		
 		while ($row = $result->fetch()) {
 			$newsList[$i]['id'] = $row['id'];
 			$newsList[$i]['title'] = $row['title'];

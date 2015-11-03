@@ -41,14 +41,14 @@ require(ROOT . '/base/header.php');
 	</div>
 
 	
-	<?php if (empty($newsList)): ?>
+	<?php if (!isset($newsList[0]['title'])): ?>
 		<!-- У випадку, якщо статтей немає - виводимо повідомлення. -->
-		<h2>Статті відсутні.</h2>
+		<h3>Статті відсутні.</h3>
 	<?php endif; ?>
 
 
 
-	<?php foreach ($newsList as $newsItem): ?>
+	<?php foreach ($newsList as $newsItem): if(isset($newsItem['title'])): ?>
 		<div class="article-item">
 
 			<h2><a href="/news/<?php print $newsItem['id']; ?>"><?php print $newsItem['title']; ?></a></h2>
@@ -74,7 +74,7 @@ require(ROOT . '/base/header.php');
 
 		</div>
 		
-	<?php endforeach; ?>
+	<?php endif; endforeach; ?>
 
 		<div class="pager">
 			<table>

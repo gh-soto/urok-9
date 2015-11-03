@@ -1,7 +1,7 @@
 <?php
  return array (
  	'host' => 'localhost',
- 	'dbname' => 'prakt',
+ 	'dbname' => '111',
  	'user' => 'root',
  	'password' => '',
 

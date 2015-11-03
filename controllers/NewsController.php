@@ -49,6 +49,11 @@ public static function actionIndexByPage($page)
 	if (!empty($newsList)) {
 		require_once (ROOT . '/views/news/index.php');		 	
 	}
+	elseif (empty($newsList)) {
+		$newsList[0]['display_none_back'] = ' style="visibility: hidden;"';
+		$newsList[0]['display_none_next'] = ' style="visibility: hidden;"';
+		require_once (ROOT . '/views/news/index.php');
+	}
 	else{
 	 	Request_errorController::actionWrong_request();
 	}
